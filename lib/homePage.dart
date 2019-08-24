@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:losty/listViewOfFound.dart';
 import 'package:losty/listViewOfLost.dart';
 import 'package:losty/animated_bottom_bar.dart';
+import 'package:losty/onClickFAB.dart';
+import 'onClickFAB.dart';
 
 class HomePage extends StatefulWidget{
   final List<BarItem> barItems = [
@@ -42,9 +44,13 @@ class _HomePageState extends State<HomePage>{
        backgroundColor: Color(0xFFfc8c03),
        foregroundColor: Colors.white,
        child: Icon(Icons.add),
-       onPressed: (){},
+       onPressed: (){
+         Navigator.push(context, MaterialPageRoute(builder: (context){
+           return FABWindow();
+         }));
+       },
      ),
-     body: selectedBarIndex == 0 ? ListViewOfLost():ListViewOfFound(),
+     body: selectedBarIndex == 0 ? ListViewOfLost(): ListViewOfFound(),
      bottomNavigationBar: AnimatedBottomBar(
          barItems: widget.barItems,
          animationDuration: const Duration(milliseconds: 150),
