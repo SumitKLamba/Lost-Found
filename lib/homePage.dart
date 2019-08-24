@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:losty/listViewOfFound.dart';
 import 'package:losty/listViewOfLost.dart';
 import 'package:losty/animated_bottom_bar.dart';
-import 'package:losty/onClickFAB.dart';
 import 'onClickFAB.dart';
 
 class HomePage extends StatefulWidget{
@@ -46,7 +45,7 @@ class _HomePageState extends State<HomePage>{
        child: Icon(Icons.add),
        onPressed: (){
          Navigator.push(context, MaterialPageRoute(builder: (context){
-           return FABWindow();
+           return OnClickFAB();
          }));
        },
      ),
