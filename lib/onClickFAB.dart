@@ -1,28 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:losty/listViewOfFound.dart';
-import 'package:losty/listViewOfLost.dart';
-import 'package:losty/animated_bottom_bar.dart';
 
-class OnClickFAB extends StatefulWidget{
-  final List<BarItem> barItems = [
-    BarItem(
-      text: "Lost",
-      iconData: Icons.blur_off,
-      color: Colors.white,
-    ),
-    BarItem(
-      text: "Found",
-      iconData: Icons.blur_on,
-      color: Colors.white,
-    ),
-  ];
+class OnClickFAB extends StatefulWidget {
   @override
   _OnClickFABState createState() => _OnClickFABState();
 }
 
-class _OnClickFABState extends State<OnClickFAB>{
-
-  int selectedBarIndex = 0;
+class _OnClickFABState extends State<OnClickFAB> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +14,8 @@ class _OnClickFABState extends State<OnClickFAB>{
         backgroundColor: Color(0xFFfc8c03),
         title: Align(
           alignment: Alignment.center,
-          child: Text('Add Items',
+          child: Text(
+            'Add Items',
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 23,
@@ -39,13 +23,22 @@ class _OnClickFABState extends State<OnClickFAB>{
           ),
         ),
       ),
-
       body: Column(
-       children: <Widget>[
-         
-       ],
+        children: <Widget>[
+          SizedBox(height: 25,),
+          Align(
+            alignment: Alignment.center,
+            child: Container(
+              height: 200,
+              width: 360,
+              decoration: BoxDecoration(
+                color: Colors.orange,
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+        ],
       ),
-
     );
   }
 }
