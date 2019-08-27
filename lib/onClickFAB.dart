@@ -84,6 +84,7 @@ class _OnClickFABState extends State<OnClickFAB> {
                     minWidth: 100,
                     minHeight: 50,
                   ),
+                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
                   onPressed: (){},
                   child: Text('Done',
                   style: TextStyle(
