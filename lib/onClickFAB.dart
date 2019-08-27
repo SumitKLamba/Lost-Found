@@ -6,12 +6,13 @@ class OnClickFAB extends StatefulWidget {
 }
 
 class _OnClickFABState extends State<OnClickFAB> {
+  String title = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFfff1ec),
       appBar: AppBar(
-        backgroundColor: Color(0xFFfc8c03),
+        backgroundColor: Color(0xFF00b9f5),
         title: Align(
           alignment: Alignment.center,
           child: Text(
@@ -32,8 +33,22 @@ class _OnClickFABState extends State<OnClickFAB> {
               height: 200,
               width: 360,
               decoration: BoxDecoration(
-                color: Colors.orange,
+                color: Color(0xFF00b9f5),
                 borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+          SizedBox(height: 40,),
+          Container(
+            width: 340,
+            child: TextField(
+              maxLength: 40,
+              onChanged: (text){
+                title = text;
+              },
+              decoration: InputDecoration(
+                labelText: 'Object',
+                border: OutlineInputBorder(),
               ),
             ),
           ),

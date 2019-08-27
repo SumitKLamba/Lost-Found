@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:losty/main.dart';
 
 class AnimatedBottomBar extends StatefulWidget {
   final List<BarItem> barItems;
@@ -23,7 +22,7 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar>
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Color(0xFFfc8c03),
+      color: Color(0xFF00b9f5),
       elevation: 10.0,
       child: Padding(
         padding: const EdgeInsets.only(
@@ -66,7 +65,7 @@ class _AnimatedBottomBarState extends State<AnimatedBottomBar>
             children: <Widget>[
               Icon(
                 item.iconData,
-                color: isSelected ? item.color : Colors.white,
+                color: isSelected ? item.color : Color(0xFF012b72),
                 size: widget.barStyle.iconSize,
               ),
               SizedBox(

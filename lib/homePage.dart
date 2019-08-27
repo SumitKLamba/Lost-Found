@@ -9,12 +9,12 @@ class HomePage extends StatefulWidget{
   BarItem(
   text: "Lost",
   iconData: Icons.blur_off,
-  color: Colors.white,
+  color: Color(0xFF012b72),
   ),
   BarItem(
   text: "Found",
   iconData: Icons.blur_on,
-  color: Colors.white,
+  color: Color(0xFF012b72),
   ),
   ];
   @override
@@ -26,9 +26,9 @@ class _HomePageState extends State<HomePage>{
  @override
  Widget build(BuildContext context) {
    return Scaffold(
-     backgroundColor: Color(0xFFfff1ec),
+     backgroundColor: Colors.white,
      appBar: AppBar(
-       backgroundColor: Color(0xFFfc8c03),
+       backgroundColor: Color(0xFF00b9f5),
        title: Align(
          alignment: Alignment.center,
          child: Text(selectedBarIndex == 0 ?'Lost Items':'Found Items',
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage>{
        ),
      ),
      floatingActionButton: FloatingActionButton(
-       backgroundColor: Color(0xFFfc8c03),
+       backgroundColor: Color(0xFF00b9f5),
        foregroundColor: Colors.white,
        child: Icon(Icons.add),
        onPressed: (){
