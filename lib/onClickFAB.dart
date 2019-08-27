@@ -57,7 +57,9 @@ class _OnClickFABState extends State<OnClickFAB> {
                 },
                 decoration: InputDecoration(
                   labelText: 'Object',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                 ),
               ),
               SizedBox(
@@ -70,7 +72,9 @@ class _OnClickFABState extends State<OnClickFAB> {
                 },
                 decoration: InputDecoration(
                   hintText: 'Description',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                 ),
               ),
               SizedBox(
