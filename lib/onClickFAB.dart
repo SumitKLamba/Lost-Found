@@ -74,7 +74,24 @@ class _OnClickFABState extends State<OnClickFAB> {
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: 30,
+              ),
+              Align(
+                alignment: Alignment.centerRight,
+                child: RawMaterialButton(
+                  fillColor: Color(0xFF00b9f5),
+                  constraints: BoxConstraints(
+                    minWidth: 100,
+                    minHeight: 50,
+                  ),
+                  onPressed: (){},
+                  child: Text('Done',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  ),
+                ),
               ),
             ],
           ),
