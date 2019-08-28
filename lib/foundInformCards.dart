@@ -31,7 +31,7 @@ class FoundInformCards extends StatelessWidget {
                       ],
                     )),
                 Positioned(
-                  top: 110,
+                  top: 140,
                   left: 20,
                   child: Container(
                     width: 200,
@@ -51,7 +51,7 @@ class FoundInformCards extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  top: 135,
+                  top: 160,
                   left: 20,
                   child: Container(
                     width: 200,
@@ -65,7 +65,7 @@ class FoundInformCards extends StatelessWidget {
                               "Title of Random Ideal Post",
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontSize: 26,
+                                  fontSize: 23,
                                   fontWeight: FontWeight.w800),
                             ),
                           ],
@@ -76,7 +76,7 @@ class FoundInformCards extends StatelessWidget {
                 Positioned(
                   left: -5.0,
                   child: Container(
-                    height: 105.0,
+                    height: 140.0,
                     width: 310.0,
                     child: Text('Found Item Image'),
                     decoration: BoxDecoration(
