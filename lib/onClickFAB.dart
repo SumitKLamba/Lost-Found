@@ -12,7 +12,7 @@ class _OnClickFABState extends State<OnClickFAB> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFfff1ec),
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Color(0xFF00b9f5),
         title: Align(
