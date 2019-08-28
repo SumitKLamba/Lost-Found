@@ -6,9 +6,6 @@ class OnClickCards extends StatefulWidget {
 }
 
 class _OnClickCardsState extends State<OnClickCards> {
-  String title = "";
-  String desc = "";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,10 +48,6 @@ class _OnClickCardsState extends State<OnClickCards> {
                 height: 40,
               ),
               TextField(
-                maxLength: 40,
-                onChanged: (text) {
-                  title = text;
-                },
                 decoration: InputDecoration(
                   labelText: 'Object',
                   border: OutlineInputBorder(),
@@ -65,9 +58,6 @@ class _OnClickCardsState extends State<OnClickCards> {
               ),
               TextField(
                 maxLines: 6,
-                onChanged: (text) {
-                  desc = text;
-                },
                 decoration: InputDecoration(
                   hintText: 'Description',
                   border: OutlineInputBorder(),
@@ -84,9 +74,11 @@ class _OnClickCardsState extends State<OnClickCards> {
                     minWidth: 100,
                     minHeight: 50,
                   ),
-                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-                  onPressed: (){},
-                  child: Text('Claim',
+                  shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0)),
+                  onPressed: () {},
+                  child: Text(
+                    'Claim',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
