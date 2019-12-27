@@ -14,18 +14,34 @@ class _OnClickFABState extends State<OnClickFAB> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Color(0xFF00b9f5),
-        title: Align(
-          alignment: Alignment.center,
-          child: Text(
-            'Add Items',
-            style: TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 23,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Add Items',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 23,
+              ),
             ),
-          ),
+          ],
         ),
       ),
+      // appBar: AppBar(
+      //   backgroundColor: Color(0xFF00b9f5),
+      //   title: Align(
+      //     alignment: Alignment.center,
+      //     child: Text(
+      //       'Add Items',
+      //       style: TextStyle(
+      //         fontWeight: FontWeight.w600,
+      //         fontSize: 23,
+      //       ),
+      //     ),
+      //   ),
+      // ),
       body: Align(
         alignment: Alignment.center,
         child: Container(
@@ -88,13 +104,15 @@ class _OnClickFABState extends State<OnClickFAB> {
                     minWidth: 100,
                     minHeight: 50,
                   ),
-                  shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30.0)),
-                  onPressed: (){},
-                  child: Text('Done',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0)),
+                  onPressed: () {},
+                  child: Text(
+                    'Done',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ),
