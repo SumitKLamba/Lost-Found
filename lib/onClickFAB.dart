@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:io';
 
 class OnClickFAB extends StatefulWidget {
   @override
@@ -6,6 +8,16 @@ class OnClickFAB extends StatefulWidget {
 }
 
 class _OnClickFABState extends State<OnClickFAB> {
+  File _image;
+
+  Future getImage() async {
+    var image = await ImagePicker.pickImage(source: ImageSource.camera);
+
+    setState(() {
+      _image = image;
+    });
+  }
+
   String title = "";
   String desc = "";
 
@@ -29,36 +41,37 @@ class _OnClickFABState extends State<OnClickFAB> {
           ],
         ),
       ),
-      // appBar: AppBar(
-      //   backgroundColor: Color(0xFF00b9f5),
-      //   title: Align(
-      //     alignment: Alignment.center,
-      //     child: Text(
-      //       'Add Items',
-      //       style: TextStyle(
-      //         fontWeight: FontWeight.w600,
-      //         fontSize: 23,
-      //       ),
-      //     ),
-      //   ),
-      // ),
       body: Align(
         alignment: Alignment.center,
         child: Container(
-          height: 700,
+          height: MediaQuery.of(context).size.height,
           width: 340,
           child: ListView(
             children: <Widget>[
               SizedBox(
-                height: 25,
+                height: 45,
               ),
               Align(
                 alignment: Alignment.center,
                 child: Container(
                   height: 200,
                   width: 360,
+                  child: _image == null ? Center(
+                    child: RawMaterialButton(
+                      fillColor: Color(0x8000b9f5),
+                      constraints: BoxConstraints(
+                        minWidth: 150,
+                        minHeight: 40,
+                      ),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(8.0)),
+                      child: Text('Click to add picture'),
+                      onPressed: getImage,
+                    ),
+                  )
+                  : Image.file(_image),
                   decoration: BoxDecoration(
-                    color: Color(0xFF00b9f5),
+                    color: Color(0x5400b9f5),
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
